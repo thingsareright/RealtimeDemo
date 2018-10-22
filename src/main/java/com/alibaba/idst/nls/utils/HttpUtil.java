@@ -475,8 +475,8 @@ public class HttpUtil {
         return result;
     }
     public static void main(String[]args){
-        String akId=""; //AKID TODO 换成杨涵的即可
-        String akSecret=""; //AKSECRET TODO 同上
+        String akId="LTAIHlDsOl6n7enI"; //AKID TODO 换成杨涵的即可
+        String akSecret="YTpJe5bEwX15vLKvZmy3P7qWmL5oMk"; //AKSECRET TODO 同上
         String url="https://nlsapi.aliyun.com/asr/custom/vocabs";
         //拼接请求的body
         List<String> strings = FileUtil.toArrayByFileReader("C:\\Users\\DELL\\Downloads\\RealtimeDemo\\RealtimeDemo\\src\\main\\resources\\scenic_spot.txt");
@@ -515,7 +515,7 @@ public class HttpUtil {
         result=HttpUtil.sendGet(url+"/"+vocabId,akId,akSecret);
         System.out.println("get result:"+result);//get result:{"request_id":"***","global_weight":3,"words":["猕猴桃","橘子","葡萄","石榴"],"word_weights":{"橘子":2}}
         //delete
-        result=HttpUtil.sendDelete(url+"/"+vocabId,akId,akSecret);
-        System.out.println("delete result:"+result);//delete result:{"request_id":"***"}
+        //result=HttpUtil.sendDelete(url+"/"+vocabId,akId,akSecret);
+        //System.out.println("delete result:"+result);//delete result:{"request_id":"***"}
     }
 }
